@@ -1,1 +1,1 @@
-# Bank Gateway
+# Bank Endpoint
