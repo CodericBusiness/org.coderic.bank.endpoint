@@ -30,7 +30,7 @@ name="${project.name}">
 	</poweredBy>
 	<body>
 		<breadcrumbs>
-			<item name="Gateway" href="/index.html"/>
+			<item name="Endpoint" href="/index.html"/>
 		</breadcrumbs>
 		<links>
 			<item name="Repositorio" href="${project.scm.url}" />
