@@ -17,7 +17,7 @@ concurrency:
   group: maven
   cancel-in-progress: true
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4

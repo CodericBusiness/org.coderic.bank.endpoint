@@ -1,13 +1,13 @@
-package net.coderic.bank.endpoint;
+package org.coderic.bank.endpoint;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GatewayApplication {
+public class EndpointApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GatewayApplication.class, args);
+		SpringApplication.run(EndpointApplication.class, args);
 	}
 
 }

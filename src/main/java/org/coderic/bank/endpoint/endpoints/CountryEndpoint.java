@@ -1,6 +1,6 @@
-package net.coderic.bank.endpoint.endpoints;
+package org.coderic.bank.endpoint.endpoints;
 
-import net.coderic.bank.endpoint.repositories.CountryRepository;
+import org.coderic.bank.endpoint.repositories.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -25,6 +25,7 @@ public class CountryEndpoint {
     @ResponsePayload
     public GetCountryResponse getCountry(@RequestPayload GetCountryRequest request) {
         GetCountryResponse response = new GetCountryResponse();
+
         response.setCountry(countryRepository.findCountry(request.getName()));
         return response;
     }

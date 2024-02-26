@@ -1,4 +1,4 @@
-package net.coderic.bank.endpoint.repositories;
+package org.coderic.bank.endpoint.repositories;
 
 import jakarta.annotation.PostConstruct;
 import java.util.HashMap;

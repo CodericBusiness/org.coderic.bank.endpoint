@@ -1,4 +1,4 @@
-package net.coderic.bank.endpoint.config;
+package org.coderic.bank.endpoint.config;
 
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;

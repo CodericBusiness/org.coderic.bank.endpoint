@@ -1,4 +1,4 @@
-package net.coderic.bank.endpoint;
+package org.coderic.bank.endpoint;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(GatewayApplication.class);
+		return application.sources(EndpointApplication.class);
 	}
 
 }

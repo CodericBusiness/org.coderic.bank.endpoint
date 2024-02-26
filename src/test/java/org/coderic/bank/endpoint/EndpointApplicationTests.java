@@ -1,4 +1,4 @@
-package net.coderic.bank.endpoint;
+package org.coderic.bank.endpoint;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
