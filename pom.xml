@@ -67,12 +67,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>wsdl4j</groupId>
@@ -100,6 +94,7 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<finalName>${project.artifactId}##${project.version}</finalName>
 		<plugins>
 			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -139,6 +134,20 @@
 					<sources>
 						<source>${project.basedir}/src/main/resources/xsd/</source>
 					</sources>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<server>TomcatServer</server>
+					<url>http://localhost:8080/manager/text</url>
+					<update>true</update>
+					<path>/${project.build.finalName}</path>
+					<ignorePackaging>true</ignorePackaging>
+					<tag>${project.version}</tag>
+					<mode>war</mode>
 				</configuration>
 			</plugin>
 		</plugins>
