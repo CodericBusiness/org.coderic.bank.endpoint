@@ -55,7 +55,7 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v4
-      - run: sed -i 's|http://localhost:8080/manager/text|${{ secrets.TOMCAT_HOST }}|g' pom.xml
+      - run: sed -i 's|http://localhost:8080/|${{ secrets.TOMCAT_HOST }}|g' pom.xml
       - name: Set up Maven Central Repository
         uses: actions/setup-java@v4
         with:
