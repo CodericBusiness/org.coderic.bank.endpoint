@@ -20,10 +20,7 @@ import java.util.List;
 @EnableWs
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
-    @Override
-    public void addInterceptors(List<EndpointInterceptor> interceptors) {
-        interceptors.add(new MyPayloadRootInterceptor());
-    }
+
     @Bean
     public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext applicationContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
